@@ -1,10 +1,338 @@
-h1{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+/* ===== RESET Y BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: #0a0a0a;
+  color: #f0f0f0;
+}
+
+/* ===== HEADER CON IMAGEN ===== */
+header {
+  height: 70vh;
+  background-image: url("img/logo1.jpg");
+  background-size: cover;
+  background-position: center 18%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Sombra sobre la imagen para que se vea mejor el logo */
+header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.45) 0%,
+    rgba(0,0,0,0.1) 50%,
+    rgba(0,0,0,0.6) 100%
+  );
+}
+
+/* ===== LOGO ===== */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+  background: rgba(0,0,0,0.45);
+  padding: 8px 16px;
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+}
+
+.logo i {
+  color: #e53935;
+  font-size: 22px;
+}
+
+.logo span {
+  color: #ffffff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+/* ===== NAVBAR ===== */
+.navegacion {
+  background: #111111;
+  border-bottom: 3px solid #e53935;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navegacion ul {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  list-style: none;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.navegacion ul li a {
+  display: block;
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 16px 14px;
+  transition: color 0.2s, background 0.2s;
+  position: relative;
+}
+
+.navegacion ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #e53935;
+  transition: width 0.25s;
+}
+
+.navegacion ul li a:hover {
+  color: #ffffff;
+}
+
+.navegacion ul li a:hover::after {
+  width: 100%;
+}
+
+/* ===== SECCIONES GENERALES ===== */
+section {
+  min-height: 100vh;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
   text-align: center;
 }
-.navegacion{
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px;
 
+/* Línea roja bajo cada título */
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #e53935;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== COLORES POR SECCIÓN ===== */
+#inicio {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+#liga1 {
+  background: #0f0f0f;
+  color: #ffffff;
+}
+
+#seleccion {
+  background: #111111;
+  color: #ffffff;
+}
+
+#posiciones {
+  background: #0f0f0f;
+  color: #ffffff;
+}
+
+#equipos {
+  background: #111111;
+  color: #ffffff;
+}
+
+#descensos {
+  background: #0f0f0f;
+  color: #ffffff;
+}
+
+#eurocausas {
+  background: #111111;
+  color: #ffffff;
+}
+
+/* ===== VIDEO YOUTUBE ===== */
+.video-contenedor {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: 24px auto 0;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #e53935;
+  box-shadow: 0 0 30px rgba(229, 57, 53, 0.3);
+}
+
+.video-contenedor iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Iframe suelto (sin div contenedor) también se ve bien */
+#liga1 > iframe {
+  margin-top: 24px;
+  border-radius: 12px;
+  border: 2px solid #e53935;
+  box-shadow: 0 0 30px rgba(229, 57, 53, 0.3);
+  max-width: 100%;
+}
+
+/* ===== FORMULARIO ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 500px;
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+form input,
+form textarea {
+  background: #0f0f0f;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 12px 16px;
+  color: #f0f0f0;
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #e53935;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #555;
+}
+
+form button {
+  background: #e53935;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background: #b71c1c;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #050505;
+  border-top: 3px solid #e53935;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-redes {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-redes a {
+  width: 42px;
+  height: 42px;
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cccccc;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.footer-redes a:hover {
+  background: #e53935;
+  border-color: #e53935;
+  color: #ffffff;
+}
+
+footer p {
+  color: #555;
+  font-size: 13px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .navegacion ul {
+    gap: 0;
+  }
+
+  .navegacion ul li a {
+    font-size: 11px;
+    padding: 12px 8px;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  section h2 {
+    font-size: 36px;
+  }
+
+  .video-contenedor {
+    width: 100%;
+  }
 }
