@@ -1,78 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="estilos.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi pagina</title>
+  <title>Fútbol Peruano</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <i class="fa-solid fa-futbol"></i>
-      <span>Fútbol Peruano</span>
+
+<header>
+  <div class="logo"><i class="fa-solid fa-futbol"></i> Fútbol Peruano</div>
+  <div class="hero">
+    <h1>Fútbol Peruano<br>en un solo lugar</h1>
+    <p>Resultados y toda la emoción del balompié nacional.</p>
+    <a href="#liga1" class="btn">Explorar ↓</a>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#liga1">Liga 1</a></li>
+    <li><a href="#seleccion">Selección</a></li>
+    <li><a href="#posiciones">Posiciones</a></li>
+    <li><a href="#equipos">Equipos</a></li>
+    <li><a href="#descensos">Descensos</a></li>
+    <li><a href="#eurocausas">Hazañas</a></li>
+  </ul>
+</nav>
+
+<section id="inicio">
+  <article>
+    <h2>Bienvenido</h2>
+    <p class="frase">"La Blanquirroja representa la pasión de todo un país."</p>
+    <div class="cards">
+      <div class="card"><span>18</span>Equipos</div>
+      <div class="card"><span>1927</span>Fundación</div>
     </div>
+    <div class="destacados">
+      <h3>Destacados</h3>
+      <div class="dest-grid">
+        <div class="dest-card">
+          <span>🏆 Campeón 2025</span>
+          <p>Universitario de Deportes, tricampeón nacional</p>
+        </div>
+        <div class="dest-card">
+          <span>📊 Liga 1 2026</span>
+          <p>Los Chankas lideran el Apertura tras 9 fechas</p>
+        </div>
+      </div>
+    </div>
+  </article>
+  <aside>
+    <h3>¿Sabías que?</h3>
+    <p>La Liga 1 es organizada por la FPF desde 1927.</p>
+  </aside>
+</section>
 
-  </header>
-  
-  <nav class="navegacion">
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#liga1">Liga 1</a></li>
-      <li><a href="#seleccion">Seleccion Peruana</a></li>
-      <li><a href="#posiciones">Posiciones</a></li>
-      <li><a href="#equipos">Equipos</a></li>
-      <li><a href="#descensos">Riesgo a descender</a></li>
-      <li><a href="#eurocausas">Eurocausas</a></li>
-    </ul>
-  </nav>
-
-  <section id="inicio">
-  <h2>Fútbol Peruano en un solo lugar</h2>
-  <p>
-    Vive la pasión del fútbol nacional con información actualizada de la Liga 1, 
-    la selección peruana y el rendimiento de nuestros jugadores dentro y fuera del país. 
-    Resultados, análisis y toda la emoción del balompié peruano.
-  </p>
-
-  <a href="#liga1" class="btn">Explorar contenido</a>
-  </section>
-  <section id="liga1">
+<section id="liga1">
+  <article>
     <h2>Liga 1</h2>
-    <iframe 
-  width="560" 
-  height="315" 
-  src="https://www.youtube.com/embed/rxmcc3tITBI" 
-  title="Video Liga 1" 
-  allowfullscreen>
-</iframe>
-  </section>
-  <section id="seleccion">
-    <h2>Selección Peruana</h2>
-  </section>
-  <section id="posiciones">
-    <h2>Posiciones</h2>
-  </section>
-  <section id="equipos">
-    <h2>Equipos</h2>
-  </section>
-  <section id="descensos">
-    <h2>Descensos</h2>
-  </section>
-  <section id="eurocausas">
-    <h2>Hazañas</h2>
-  </section>
+    <div class="cards" style="margin-bottom: 20px;">
+      <div class="card"><span>34</span>Fechas</div>
+      <div class="card"><i class="fa-solid fa-tv"></i><br>Canal<br><span>L1 MAX</span></div>
+    </div>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/rxmcc3tITBI" allowfullscreen></iframe>
+    </div>
+  </article>
+  <aside>
+    <h3>Formato</h3>
+    <p>Se juegan Apertura y Clausura. Los campeones definen el título nacional.</p>
+  </aside>
+</section>
 
-  <form action="">
-    <input type="text"name="nombre" id="nombre" placeholder="Escribir el nombre..">
-    <br><br/>
-    <input type="text"name="apellidos" id="apellidos" placeholder="Apellidos..">
-    <br><br/>
-    <input type="email"name="correo" id="email" placeholder="Correo..">
-    <br><br/>
-    <input type="text"name="mensaje" id="mensaje" placeholder="Mensaje..">
-  </form>
+<section id="seleccion">
+  <article>
+    <h2>Selección Peruana</h2>
+    <div class="cards">
+      <div class="card"><i class="fa-solid fa-shirt"></i><br>8 Jun</div>
+      <div class="card"><i class="fa-solid fa-ranking-star"></i><br>#53</div>
+    </div>
+    <div class="hazanas" style="margin-top: 24px;">
+      <div class="hazana">
+        <b>Jun</b>
+        <div>
+          <strong>Perú vs España — 8 de junio 2026</strong>
+          <p>Amistoso internacional en Puebla, México.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+  <aside>
+    <h3>Era Menezes</h3>
+    <p>Mano Menezes apuesta por el recambio generacional para 2030.</p>
+  </aside>
+</section>
+
+<section id="posiciones">
+  <article>
+    <h2>Posiciones</h2>
+    <table>
+      <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>Pts</th></tr></thead>
+      <tbody>
+        <tr class="azul"><td>1</td><td>Los Chankas</td><td>9</td><td>19</td></tr>
+        <tr class="azul"><td>2</td><td>Alianza Lima</td><td>9</td><td>17</td></tr>
+        <tr class="rojo"><td>18</td><td>FC Cajamarca</td><td>8</td><td>5</td></tr>
+      </tbody>
+    </table>
+  </article>
+  <aside>
+    <h3>Líder Sorpresa</h3>
+    <p>Los Chankas de Andahuaylas son la gran revelación del 2026.</p>
+  </aside>
+</section>
+
+<section id="equipos">
+  <article>
+    <h2>Equipos</h2>
+    <div class="equipos">
+      <div class="equipo"><div class="ini">U</div>Universitario</div>
+      <div class="equipo"><div class="ini">AL</div>Alianza Lima</div>
+      <div class="equipo"><div class="ini">SC</div>Sporting Cristal</div>
+    </div>
+  </article>
+  <aside>
+    <h3>Ascendidos</h3>
+    <p>FC Cajamarca y CD Moquegua subieron de Liga 2 este año.</p>
+  </aside>
+</section>
+
+<section id="descensos">
+  <article>
+    <h2>Riesgo a Descender</h2>
+    <table>
+      <thead><tr><th>Estado</th><th>Equipo</th><th>Situación</th></tr></thead>
+      <tbody>
+        <tr><td><span class="dot" style="background:#e53935"></span></td><td>Ayacucho FC</td><td style="color:#e53935">Descendió</td></tr>
+        <tr><td><span class="dot" style="background:#f57c00"></span></td><td>FC Cajamarca</td><td style="color:#f57c00">En riesgo</td></tr>
+      </tbody>
+    </table>
+  </article>
+  <aside>
+    <h3>Regla</h3>
+    <p>Los dos peores de la tabla acumulada descienden.</p>
+  </aside>
+</section>
+
+<section id="eurocausas">
+  <article>
+    <h2>Hazañas</h2>
+    <div class="hazanas">
+      <div class="hazana dest">
+        <b>1975</b>
+        <div><strong>Perú campeón de América</strong><p>Triunfo histórico en Colombia.</p></div>
+      </div>
+      <div class="hazana">
+        <b>2003</b>
+        <div><strong>Cienciano</strong><p>Único campeón peruano de la Sudamericana.</p></div>
+      </div>
+    </div>
+  </article>
+  <aside>
+    <h3>Leyendas</h3>
+    <p>Teófilo Cubillas es considerado el mejor jugador de nuestra historia.</p>
+  </aside>
+</section>
+
+<section id="contacto">
+  <article>
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Nombre">
+      <input type="email" placeholder="Correo electrónico">
+      <textarea rows="4" placeholder="Tu mensaje..."></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </article>
+  <aside>
+    <h3>Redes</h3>
+    <p>Síguenos para estar al día con la Bicolor.</p>
+  </aside>
+</section>
+
+<footer>
+  <p><i class="fa-solid fa-futbol" style="color:#e53935"></i> Fútbol Peruano</p>
+  <div class="redes">
+    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+  </div>
+  <small>&copy; 2026</small>
+</footer>
+
 </body>
 </html>

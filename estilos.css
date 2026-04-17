@@ -1,338 +1,359 @@
-
-/* ===== RESET Y BASE ===== */
+/* CONFIGURACIÓN GENERAL */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Barlow', sans-serif;
-  background: #0a0a0a;
-  color: #f0f0f0;
+    font-family: 'Barlow', sans-serif;
+    background: #0a0a0a;
+    color: #f0f0f0;
+    overflow-x: hidden;
 }
 
-/* ===== HEADER CON IMAGEN ===== */
+/* HEADER CON OVERLAY OSCURO */
 header {
-  height: 70vh;
-  background-image: url("img/logo1.jpg");
-  background-size: cover;
-  background-position: center 18%;
-  background-repeat: no-repeat;
-  position: relative;
+    height: 80vh;
+    /* Degradado de negro transparente a negro más sólido + imagen */
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url("img/logo1.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
 }
 
-/* Sombra sobre la imagen para que se vea mejor el logo */
-header::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.45) 0%,
-    rgba(0,0,0,0.1) 50%,
-    rgba(0,0,0,0.6) 100%
-  );
-}
-
-/* ===== LOGO ===== */
+/* LOGO ESTILO BOTÓN OSCURO (Arriba Izquierda) */
 .logo {
-  position: absolute;
-  top: 20px;
-  left: 24px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 10;
-  background: rgba(0,0,0,0.45);
-  padding: 8px 16px;
-  border-radius: 6px;
-  backdrop-filter: blur(4px);
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    border: 1px solid #e53935; /* Borde rojo fino */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.logo i {
-  color: #e53935;
-  font-size: 22px;
+.logo i { 
+    color: #e53935; 
+    font-size: 24px;
 }
 
-.logo span {
-  color: #ffffff;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 20px;
-  letter-spacing: 2px;
+/* CONTENIDO CENTRAL (HERO) */
+.hero {
+    position: relative;
+    z-index: 5;
+    padding: 0 20px;
 }
 
-/* ===== NAVBAR ===== */
-.navegacion {
-  background: #111111;
-  border-bottom: 3px solid #e53935;
-  padding: 0 24px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+.hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 70px;
+    letter-spacing: 4px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-.navegacion ul {
-  display: flex;
-  justify-content: center;
-  gap: 4px;
-  list-style: none;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
+.hero p {
+    color: #ccc;
+    font-size: 18px;
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.navegacion ul li a {
-  display: block;
-  text-decoration: none;
-  color: #cccccc;
-  font-size: 13px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  padding: 16px 14px;
-  transition: color 0.2s, background 0.2s;
-  position: relative;
+.btn {
+    display: inline-block;
+    background: #e53935;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 4px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    text-transform: uppercase;
 }
 
-.navegacion ul li a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: #e53935;
-  transition: width 0.25s;
+.btn:hover { 
+    background: #b71c1c; 
+    transform: scale(1.05);
 }
 
-.navegacion ul li a:hover {
-  color: #ffffff;
+/* NAVEGACIÓN */
+nav {
+    background: #111;
+    border-bottom: 3px solid #e53935;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.navegacion ul li a:hover::after {
-  width: 100%;
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
 }
 
-/* ===== SECCIONES GENERALES ===== */
+nav ul li a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    padding: 16px 15px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav ul li a:hover { 
+    color: #fff; 
+    background: rgba(229,57,53,0.1);
+}
+
+/* SECCIONES */
 section {
-  min-height: 100vh;
-  padding: 60px 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    min-height: 100vh;
+    padding: 80px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
 }
 
-section h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 48px;
-  letter-spacing: 4px;
-  margin-bottom: 12px;
-  text-align: center;
+#inicio, #contacto { background: #0a0a0a; }
+#liga1, #posiciones, #descensos { background: #0f0f0f; }
+#seleccion, #equipos, #eurocausas { background: #111; }
+
+article {
+    flex: 1;
+    min-width: 300px;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Línea roja bajo cada título */
-section h2::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #e53935;
-  margin: 10px auto 0;
-  border-radius: 2px;
+aside {
+    width: 240px;
+    background: #141414;
+    border: 1px solid #222;
+    border-left: 4px solid #e53935;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-/* ===== COLORES POR SECCIÓN ===== */
-#inicio {
-  background: #0a0a0a;
-  color: #ffffff;
+aside h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #e53935;
+    margin-bottom: 10px;
 }
 
-#liga1 {
-  background: #0f0f0f;
-  color: #ffffff;
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+    letter-spacing: 4px;
+    text-align: center;
 }
 
-#seleccion {
-  background: #111111;
-  color: #ffffff;
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #e53935;
+    margin: 10px auto 25px;
 }
 
-#posiciones {
-  background: #0f0f0f;
-  color: #ffffff;
-}
-
-#equipos {
-  background: #111111;
-  color: #ffffff;
-}
-
-#descensos {
-  background: #0f0f0f;
-  color: #ffffff;
-}
-
-#eurocausas {
-  background: #111111;
-  color: #ffffff;
-}
-
-/* ===== VIDEO YOUTUBE ===== */
-.video-contenedor {
-  position: relative;
-  width: 80%;
-  max-width: 800px;
-  margin: 24px auto 0;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 2px solid #e53935;
-  box-shadow: 0 0 30px rgba(229, 57, 53, 0.3);
-}
-
-.video-contenedor iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Iframe suelto (sin div contenedor) también se ve bien */
-#liga1 > iframe {
-  margin-top: 24px;
-  border-radius: 12px;
-  border: 2px solid #e53935;
-  box-shadow: 0 0 30px rgba(229, 57, 53, 0.3);
-  max-width: 100%;
-}
-
-/* ===== FORMULARIO ===== */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  width: 100%;
-  max-width: 500px;
-  background: #161616;
-  border: 1px solid #2a2a2a;
-  border-radius: 12px;
-  padding: 32px;
-}
-
-form input,
-form textarea {
-  background: #0f0f0f;
-  border: 1px solid #2a2a2a;
-  border-radius: 6px;
-  padding: 12px 16px;
-  color: #f0f0f0;
-  font-family: 'Barlow', sans-serif;
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.2s;
-  width: 100%;
-}
-
-form input:focus,
-form textarea:focus {
-  border-color: #e53935;
-}
-
-form input::placeholder,
-form textarea::placeholder {
-  color: #555;
-}
-
-form button {
-  background: #e53935;
-  color: #ffffff;
-  border: none;
-  border-radius: 6px;
-  padding: 14px;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 20px;
-  letter-spacing: 2px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-form button:hover {
-  background: #b71c1c;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  background: #050505;
-  border-top: 3px solid #e53935;
-  padding: 40px 24px;
-  text-align: center;
-}
-
-.footer-logo {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 28px;
-  letter-spacing: 3px;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.footer-redes {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-bottom: 20px;
-}
-
-.footer-redes a {
-  width: 42px;
-  height: 42px;
-  background: #161616;
-  border: 1px solid #2a2a2a;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #cccccc;
-  font-size: 16px;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-
-.footer-redes a:hover {
-  background: #e53935;
-  border-color: #e53935;
-  color: #ffffff;
-}
-
-footer p {
-  color: #555;
-  font-size: 13px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-  .navegacion ul {
-    gap: 0;
-  }
-
-  .navegacion ul li a {
-    font-size: 11px;
-    padding: 12px 8px;
-  }
-
-  section {
-    padding: 40px 20px;
-  }
-
-  section h2 {
-    font-size: 36px;
-  }
-
-  .video-contenedor {
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
     width: 100%;
-  }
+    margin-top: 30px;
+}
+
+.card {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 25px 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover { border-color: #e53935; }
+
+.card span {
+    display: block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: #e53935;
+}
+
+/* TABLAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-size: 14px;
+    background: #141414;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background: #1a1a1a;
+    color: #e53935;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #e53935;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #222;
+}
+
+tr.azul { border-left: 4px solid #1565c0; }
+tr.rojo { border-left: 4px solid #e53935; }
+
+/* EQUIPOS GRID */
+.equipos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.equipo {
+    background: #141414;
+    border: 1px solid #222;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.ini {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 12px;
+    background: #1e1e1e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e53935;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+}
+
+/* HAZAÑAS */
+.hazanas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hazana {
+    display: flex;
+    gap: 20px;
+    background: #141414;
+    padding: 20px;
+    border-left: 4px solid #333;
+    border-radius: 0 8px 8px 0;
+}
+
+.hazana b {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    color: #e53935;
+}
+
+/* FORMULARIO */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    background: #141414;
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid #222;
+}
+
+input, textarea {
+    background: #0f0f0f;
+    border: 1px solid #252525;
+    padding: 14px;
+    color: #f0f0f0;
+    outline: none;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus { border-color: #e53935; }
+
+button {
+    background: #e53935;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+/* FOOTER */
+footer {
+    background: #050505;
+    border-top: 4px solid #e53935;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.redes {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.redes a {
+    color: #fff;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.redes a:hover { color: #e53935; }
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
 }
