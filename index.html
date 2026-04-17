@@ -34,24 +34,32 @@
 <section id="inicio">
   <article>
     <h2>Bienvenido</h2>
-    <p class="frase">"La Blanquirroja representa la pasión de todo un país."</p>
-    <div class="cards">
+    <p style="margin-top:10px;">
+    La Liga 1 reúne a los clubes más importantes del país y es seguida por millones de aficionados.
+    </p>
       <div class="card"><span>18</span>Equipos</div>
       <div class="card"><span>1927</span>Fundación</div>
     </div>
     <div class="destacados">
-      <h3>Destacados</h3>
-      <div class="dest-grid">
-        <div class="dest-card">
-          <span>🏆 Campeón 2025</span>
-          <p>Universitario de Deportes, tricampeón nacional</p>
-        </div>
-        <div class="dest-card">
-          <span>📊 Liga 1 2026</span>
-          <p>Los Chankas lideran el Apertura tras 9 fechas</p>
-        </div>
+    <h3>Destacados</h3>
+
+    <div class="dest-grid">
+      <div class="dest-card">
+        <span>🏆 Campeón</span>
+        <p>Universitario tricampeón</p>
+      </div>
+
+      <div class="dest-card">
+        <span>⚽ Goleador</span>
+        <p>Luis Benites</p>
+      </div>
+
+      <div class="dest-card">
+        <span>📊 Liga</span>
+        <p>Chankas líderes</p>
       </div>
     </div>
+  </div>
   </article>
   <aside>
     <h3>¿Sabías que?</h3>
@@ -101,15 +109,53 @@
 
 <section id="posiciones">
   <article>
-    <h2>Posiciones</h2>
-    <table>
-      <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>Pts</th></tr></thead>
-      <tbody>
-        <tr class="azul"><td>1</td><td>Los Chankas</td><td>9</td><td>19</td></tr>
-        <tr class="azul"><td>2</td><td>Alianza Lima</td><td>9</td><td>17</td></tr>
-        <tr class="rojo"><td>18</td><td>FC Cajamarca</td><td>8</td><td>5</td></tr>
-      </tbody>
-    </table>
+    <h3 style="margin-top:20px;">Tabla de Riesgo 2026</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Equipo</th>
+        <th>PJ</th>
+        <th>DG</th>
+        <th>Pts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="rojo">
+        <td>18</td>
+        <td>FC Cajamarca</td>
+        <td>8</td>
+        <td>-10</td>
+        <td>5</td>
+      </tr>
+      <tr class="rojo">
+        <td>17</td>
+        <td>Sport Huancayo</td>
+        <td>9</td>
+        <td>-6</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>ADT</td>
+        <td>9</td>
+        <td>-3</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>Comerciantes Unidos</td>
+        <td>9</td>
+        <td>-2</td>
+        <td>10</td>
+      </tr>
+    </tbody>
+  </table>
+
+<div class="leyenda">
+  <span><b style="color:#e53935">■</b> Zona descenso</span>
+</div>
   </article>
   <aside>
     <h3>Líder Sorpresa</h3>
@@ -174,9 +220,21 @@
     <h2>Contacto</h2>
     <form>
       <input type="text" placeholder="Nombre">
+      <input type="text" placeholder="Apellidos">
       <input type="email" placeholder="Correo electrónico">
-      <textarea rows="4" placeholder="Tu mensaje..."></textarea>
-      <button type="submit">Enviar</button>
+      <select style="background:#0f0f0f; border:1px solid #252525; border-radius:6px; padding:11px 14px; color:#f0f0f0; font-family:'Barlow',sans-serif; font-size:14px; outline:none;">
+        <option value="" disabled selected style="color:#444">Equipo favorito</option>
+        <option>Universitario</option>
+        <option>Alianza Lima</option>
+        <option>Sporting Cristal</option>
+        <option>FBC Melgar</option>
+        <option>Cienciano</option>
+        <option>Cusco FC</option>
+        <option>Los Chankas</option>
+        <option>Otro</option>
+      </select>
+      <textarea rows="4" placeholder="Tu mensaje o sugerencia..."></textarea>
+      <button type="submit">Enviar mensaje</button>
     </form>
   </article>
   <aside>
@@ -188,11 +246,14 @@
 <footer>
   <p><i class="fa-solid fa-futbol" style="color:#e53935"></i> Fútbol Peruano</p>
   <div class="redes">
-    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://x.com/SeleccionPeru"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://www.instagram.com/labicolor/"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@bicolor-2026"><i class="fa-brands fa-youtube"></i></a>
+    <a href="https://www.tiktok.com/@labicolor_pe"><i class="fa-brands fa-tiktok"></i></a>
   </div>
-  <small>&copy; 2026</small>
+  <small>&copy; 2026 Fútbol Peruano</small>
 </footer>
+
 
 </body>
 </html>
