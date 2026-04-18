@@ -5,7 +5,7 @@ body { font-family: 'Barlow', sans-serif; background: #0a0a0a; color: #f0f0f0; }
 /* ========== HEADER ========== */
 header {
   height: 75vh;
-  background: url("img/logo1.jpg") center/cover;
+  background: url("img/logo1.jpg") center 30%/cover;
   display: flex; align-items: center; justify-content: center;
   flex-direction: column; text-align: center;
   position: relative;
