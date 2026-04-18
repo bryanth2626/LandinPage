@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilos.css">
+  
 </head>
 <body>
 
@@ -419,7 +420,7 @@
   <article>
     <h2>Contacto</h2>
     <p>¿Tienes sugerencias? Escríbenos.</p>
-    <form>
+    <form id="miForm">
       <input type="text" placeholder="Nombre">
       <input type="text" placeholder="Apellidos">
       <input type="email" placeholder="Correo electrónico">
@@ -437,6 +438,9 @@
       <textarea rows="4" placeholder="Tu mensaje o sugerencia..."></textarea>
       <button type="submit">Enviar mensaje</button>
     </form>
+    <p id="mensaje-ok" style="display:none; color:#e53935; font-family:'Bebas Neue',sans-serif; font-size:20px; text-align:center; margin-top:16px;">
+    ✅ ¡Mensaje enviado! Gracias por escribirnos.
+    </p>
   </article>
 
   <aside>
@@ -459,6 +463,6 @@
   </div>
   <small>&copy; 2026 Fútbol Peruano</small>
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
